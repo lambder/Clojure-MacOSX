@@ -1,0 +1,8 @@
+I wanted a good way to get "Clojure":http://clojure.org set up on Mac OS X.
+
+Based on the instructions I read at "Mark Reid's Blog":http://mark.reid.name/sap/setting-up-clojure.html I created this project to pull everything into one place.
+
+I made some changes and assumptions.
+# You've already got java 1.6 set up and are using it as your default java from command line.
+# You will put the /bin directory in this project in your path so you don't have to set any other environment variables.
+## Or you will symlink to it.  Either way you shouldn't have to set anything else up.

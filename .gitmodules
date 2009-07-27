@@ -1,0 +1,9 @@
+[submodule "clojure"]
+	path = clojure
+	url = git://github.com/richhickey/clojure.git
+[submodule "clojure-contrib"]
+	path = clojure-contrib
+	url = git://github.com/richhickey/clojure-contrib.git
+[submodule "jline"]
+	path = jline
+	url = git://github.com/rickyclarkson/jline.git

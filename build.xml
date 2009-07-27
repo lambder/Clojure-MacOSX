@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<project name="Clojure-OSX" default="all" basedir=".">
+
+	
+    <target name="clojure">
+        <ant dir="clojure" inheritall="false" target="clojure"/>
+    </target>
+
+    <target name="clojure-contrib" depends="clojure">
+        <ant dir="clojure-contrib" inheritall="false" target="jar">
+			<property name="clojure.jar" value="../clojure/clojure.jar"/>
+		</ant>
+    </target>
+
+	<target name="jline">
+		<mkdir dir="jline/classes"/>
+		<javac
+            srcdir="jline/src/main/java"
+            destdir="jline/classes">
+            <compilerarg value="-Xlint"/>
+        </javac>
+        <jar jarfile="jline/jline.jar" basedir="jline/classes">
+            <fileset dir="jline">
+                <include name="LICENSE.txt"/>
+                <include name="pom.xml"/>
+            </fileset>
+        </jar>
+	</target>
+
+	<target name="all" depends="clojure, clojure-contrib, jline"/>
+	
+	<target name="clean">
+		<ant dir="clojure" inheritall="false" target="clean"/>
+		<ant dir="clojure-contrib" inheritall="false" target="clean"/>
+		<delete dir="jline/classes"/>
+		<delete file="jline/jline.jar"/>
+	</target>       
+	
+</project>
