@@ -5,10 +5,22 @@
 # Mark Reid <http://mark.reid.name>
 # CREATED: 2009-03-29
 JAVA=/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin/java 
-CLJ_DIR=$HOME/Library/Clojure/lib
-CLOJURE=$CLJ_DIR/clojure.jar
-CONTRIB=$CLJ_DIR/clojure-contrib.jar
-JLINE=$CLJ_DIR/jline.jar
+# resolve links - $0 may be a softlink
+PRG="$0"
+while [ -h "$PRG" ]; do
+  ls=`ls -ld "$PRG"`
+  link=`expr "$ls" : '.*-> \(.*\)$'`
+  if expr "$link" : '/.*' > /dev/null; then
+    PRG="$link"
+  else
+    PRG=`dirname "$PRG"`/"$link"
+  fi
+done
+PRGDIR=`dirname "$PRG"`
+CLJ_DIR=$PRGDIR/..
+CLOJURE=$CLJ_DIR/clojure/clojure.jar
+CONTRIB=$CLJ_DIR/clojure-contrib/clojure-contrib.jar
+JLINE=$CLJ_DIR/jline/jline.jar
 CP=$PWD:$CLOJURE:$JLINE:$CONTRIB
 
 # Add extra jars as specified by `.clojure` file
