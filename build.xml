@@ -24,6 +24,9 @@
                 <include name="LICENSE.txt"/>
                 <include name="pom.xml"/>
             </fileset>
+            <fileset dir="jline/src/main/resources">
+				<include name="**/*.properties"/>
+			</fileset>
         </jar>
 	</target>
 
