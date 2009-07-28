@@ -21,7 +21,7 @@ Build the dependancies:
 Make the `clj` script executable and link to it from somewhere in your `$PATH`. (I use `~/bin` and have added it to my `$PATH` in my `~/.bash_profile`):
 
 	$ chmod u+x clj
-	$ ln -s clj ~/bin/clj
+	$ ln -s <Full path to wherever you put this project>/clj ~/bin/clj
 
 Usage
 -----

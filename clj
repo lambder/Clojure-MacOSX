@@ -16,8 +16,7 @@ while [ -h "$PRG" ]; do
     PRG=`dirname "$PRG"`/"$link"
   fi
 done
-PRGDIR=`dirname "$PRG"`
-CLJ_DIR=$PRGDIR/..
+CLJ_DIR=`dirname "$PRG"`
 CLOJURE=$CLJ_DIR/clojure/clojure.jar
 CONTRIB=$CLJ_DIR/clojure-contrib/clojure-contrib.jar
 JLINE=$CLJ_DIR/jline/jline.jar
