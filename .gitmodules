@@ -7,3 +7,6 @@
 [submodule "jline"]
 	path = jline
 	url = git://github.com/rickyclarkson/jline.git
+[submodule "Clojure.tmbundle"]
+	path = Clojure.tmbundle
+	url = git://github.com/stephenroller/clojure-tmbundle.git

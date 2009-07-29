@@ -30,7 +30,15 @@
         </jar>
 	</target>
 
-	<target name="all" depends="clojure, clojure-contrib, jline"/>
+	<target name="tmbundle" depends="clojure, clojure-contrib, jline">
+		<copy todir="Clojure.tmbundle/Vendor" overwrite="true">
+			<fileset dir="clojure" includes="clojure.jar"/>
+			<fileset dir="clojure-contrib" includes="clojure-contrib.jar"/>
+			<fileset dir="jline" includes="jline.jar"/>
+		</copy>
+	</target>
+	
+	<target name="all" depends="clojure, clojure-contrib, jline, tmbundle"/>
 	
 	<target name="clean">
 		<ant dir="clojure" inheritall="false" target="clean"/>
