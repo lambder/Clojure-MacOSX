@@ -37,6 +37,12 @@ or it can be used to run a script:
 	$ clj test.clj 
 	Hello, Clojure!
 
+or it can be used to make a script file executable by starting your file with this line:
+
+	#!/usr/bin/env clj
+
+then chmod u+x your file and run it.
+	
 To add extra jar files to the Clojure's classpath on a project-by-prject basis, just create a `.clojure` file in the project's directory with the text to add to the classpath. 
 
 For example, in my `~/code/clojure/cafe` project directory, I can add the Grinder and Frother jars from the `~/code/clojure/cafe/lib` directory by putting their relative paths, separated by a colon, into a `.clojure` file:
