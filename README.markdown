@@ -74,6 +74,11 @@ If your project direectory is `~/code/clojure/cafe`, you can add the Grinder and
 	$ cd ~/code/clojure/cafe
 	$ echo "lib/grinder.jar:lib/frother.jar" > .clojure
 
+You can also list jars one per line in the .clojure file, like so:
+
+  $ cd ~/code/clojure/cafe
+  $ ls -1 lib/*.jar > .clojure
+
 Staying up to date
 ------------------
 
